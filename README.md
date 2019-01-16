@@ -14,4 +14,4 @@ Delete button removes interest from JSON and automaically removes from DOM
 
 Edit button not functioning correctly
 
-fetch the name of each location to display instead of the location ID
+Fetch the name of each location to display instead of the location ID
