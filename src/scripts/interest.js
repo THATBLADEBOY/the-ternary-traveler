@@ -1,5 +1,7 @@
 import interestCollect from "./interestCollection"
 import interestList from "./interestList";
+import interestCollection from "./interestCollection";
+import interestEditForm from "./interestEditForm";
 
 const interest = {
     makeInterestHTML(interestObj) {
@@ -22,9 +24,45 @@ const interest = {
         reviewParagraph.textContent = `${interestObj.review}`;
         interestListOutput.appendChild(reviewParagraph);
 
+
+
+
+// EDIT PORTION UNDERWAY!!!!!!!!!!!
+
+
         const editButton = document.createElement("button");
         editButton.textContent = "Edit";
         interestListOutput.appendChild(editButton);
+        editButton.setAttribute("id", `interest--${interestObj.id}`)
+        editButton.addEventListener("click", () => {
+        let articleId = event.target.parentNode.id
+        let interestId = event.target.id.split("--")[1]
+          console.log(interestId)
+          interestCollection.getInterest(interestId)
+          .then(response => {
+            interestEditForm.createAndAppendForm(interestId, response)
+          })
+        })
+
+
+
+
+    //     let editFoodButton = document.createElement("button")
+    // editFoodButton.textContent = "Edit"
+    // editFoodButton.addEventListener("click", () => {
+    //   let articleId = event.target.parentNode.id
+    //   let foodId = articleId.split("--")[1]
+    //   foodCollection.getFood(foodId)
+    //   .then(response => {
+    //     foodEditForm.createAndAppendForm(articleId, response)
+    //   })
+    // })
+
+
+
+
+
+
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";

@@ -35,7 +35,11 @@ const interestCollection = {
         },
         body: JSON.stringify(interestToEdit)
       })
-    }
+    },
+    getInterest(interestId) {
+      return fetch(`http://localhost:8088/interests/${interestId}`)
+      .then(response => response.json())
+    },
   }
 
   export default interestCollection
