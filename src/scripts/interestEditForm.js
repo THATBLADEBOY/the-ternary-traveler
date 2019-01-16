@@ -2,7 +2,6 @@ import interestCollection from "./interestCollection";
 import interestList from "./interestList";
 
 const interestEditForm = {
-  // This module will build an edit form and append it to the DOM. The form will contain input fields with existing values from the API and an Update button. The user can edit the the values in the input fields. An event listener on the Update button will handle taking the new values entered by the user and calling the API to update the data.
   createAndAppendForm (interestId, interestObjToEdit) {
 
     
@@ -30,8 +29,7 @@ const interestEditForm = {
     let updateButton = document.createElement("button")
     updateButton.textContent = "Update"
 
-    // There is an event listener on the Update button which will take the new values in the input fields and build an object for the food item to be edited. Then we make a HTTP PUT request where we target the food item we want to edit by specifying the id in the URL. We also pass the object representing the food item with the new values as data in our HTTP request. Once again, because our data has been modified, we make an HTTP GET request to get all the food items and display them.
-    updateButton.addEventListener("click", () => {
+   
     
     let edittedInterest = {
         placeId: interestObjToEdit.placeId,
@@ -52,7 +50,7 @@ const interestEditForm = {
     //     interestItemArticle.removeChild(interestItemArticle.firstChild);
     //   }
       
-    })
+    
 
     
 
