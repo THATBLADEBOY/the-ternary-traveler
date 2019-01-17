@@ -7,6 +7,7 @@ const interest = {
     makeInterestHTML(interestObj) {
         // const outPutArticle = document.querySelector(".output");
         const interestListOutput = document.createElement("article")
+        interestListOutput.setAttribute("id", `interest--${interestObj.id}`)
         // outPutArticle.appendChild(interestListOutput);
         const placeHeader = document.createElement("h3");
         placeHeader.textContent = `${interestObj.placeId}`;
@@ -40,7 +41,7 @@ const interest = {
           console.log(interestId)
           interestCollection.getInterest(interestId)
           .then(response => {
-            interestEditForm.createAndAppendForm(interestId, response)
+            interestEditForm.createAndAppendForm(articleId, response)
           })
         })
 

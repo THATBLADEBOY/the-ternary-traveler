@@ -19,27 +19,11 @@
   "interests": [
     {
       "placeId": 1,
-      "name": "Test",
-      "description": "Test",
-      "cost": "Test",
-      "review": "",
+      "name": "THIS IS IT!!!",
+      "description": "YES IT ISS!!!",
+      "cost": "MO MONEY",
+      "review": "ITS GREAT",
       "id": 1
-    },
-    {
-      "placeId": 1,
-      "name": "Test2",
-      "description": "Test2",
-      "cost": "Test2",
-      "review": "",
-      "id": 2
-    },
-    {
-      "placeId": 1,
-      "name": "Test3",
-      "description": "Test3",
-      "cost": "Test3",
-      "review": "",
-      "id": 3
     }
   ]
 }
