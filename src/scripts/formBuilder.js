@@ -9,21 +9,31 @@ const output_art = document.querySelector(".form-output");
 
 const formBuilder = {
     buildForm() {
+
+        output_art.setAttribute("class", "container")
         
         const formArticle = document.createElement("article");
+        formArticle.setAttribute("class", "form-container")
         output_art.appendChild(formArticle);
         const formHeader = document.createElement("h2");
         formHeader.textContent = "Create a New Interest";
         formArticle.appendChild(formHeader); 
         
         nameInput.placeholder = "Name";
+        nameInput.setAttribute("class", "form-control")
         formArticle.appendChild(nameInput);
         
         descriptionInput.placeholder = "Description";
+        descriptionInput.setAttribute("class", "form-control")
         formArticle.appendChild(descriptionInput);
+
+        const costPlaceAddArticle = document.createElement("article");
+        formArticle.appendChild(costPlaceAddArticle);
+        costPlaceAddArticle.setAttribute("class", "cost-place-add");
         
         costInput.placeholder = "Cost";
-        formArticle.appendChild(costInput);
+        costInput.setAttribute("class", "form-control")
+        costPlaceAddArticle.appendChild(costInput);
 
         interestCollection.getAllPlaces()
         .then(place => {
@@ -44,16 +54,19 @@ const formBuilder = {
         placeSelection.appendChild(londonOption);
         placeSelection.appendChild(parisOption);
         placeSelection.appendChild(berlinOption);
-        formArticle.appendChild(placeSelection);
+        costPlaceAddArticle.appendChild(placeSelection);
 
-    })
+    
 
         
         const addInterestButton = document.createElement("button");
         addInterestButton.textContent = "Add";
-        formArticle.appendChild(addInterestButton);
+        addInterestButton.setAttribute("class", "btn btn-primary")
+        costPlaceAddArticle.appendChild(addInterestButton);
 
         addInterestButton.addEventListener("click", this.addButtonFunction);
+
+    })  
     
     },
 

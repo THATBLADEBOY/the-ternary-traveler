@@ -19,11 +19,19 @@
   "interests": [
     {
       "place": "London",
-      "name": "Testing",
-      "description": "Testing",
-      "cost": "Testingadfad",
-      "review": "ewfwef",
-      "id": 1
+      "name": "Water Polo Lessons",
+      "description": "London offers a unique experience of water polo in freezing temperatures. Seems like it might be a good way to relax.",
+      "cost": "$50.00",
+      "review": "NOT A GOOD WAY TO RELAX",
+      "id": 2
+    },
+    {
+      "place": "Paris",
+      "name": "Wine Sampling in the famous vineyard",
+      "description": "tour the famous vineyard thing and drink expensive grape juice",
+      "cost": "$200.00",
+      "review": "",
+      "id": 3
     }
   ]
 }

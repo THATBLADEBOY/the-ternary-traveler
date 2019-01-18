@@ -27,6 +27,7 @@ const interestEditForm = {
 
 
     let updateButton = document.createElement("button")
+    updateButton.setAttribute("class", "btn btn-primary");
     updateButton.textContent = "Update"
     updateButton.addEventListener("click", () => {
       
