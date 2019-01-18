@@ -1,0 +1,37 @@
+.btn-primary {
+    margin: 5px;
+}
+
+.interest-container {
+    background-color: rgb(235, 235, 235);
+    /* max-width: 50%; */
+    border-radius: 2%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.form-container {
+    /* max-width: 50%; */
+    margin: auto;
+}
+
+body {
+    font-family: 'Staatliches', cursive;
+}
+
+.cost-place-add {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .interest-container {
+        max-width:50%;
+    }
+
+    .form-container {
+        max-width: 50%;
+    }
+
+    
+}
