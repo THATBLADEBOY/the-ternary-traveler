@@ -9,6 +9,10 @@ const interest = {
         const interestListOutput = document.createElement("article")
         interestListOutput.setAttribute("id", `interest--${interestObj.id}`)
         // outPutArticle.appendChild(interestListOutput);
+        // let placeName = 
+        // interestCollection.getAllPlaces()
+        // .then(place => console.log(place[0].name, place[1].name, place[2]))
+
         const placeHeader = document.createElement("h3");
         placeHeader.textContent = `${interestObj.placeId}`;
         interestListOutput.appendChild(placeHeader);
@@ -59,6 +63,7 @@ const interest = {
         deleteButton.setAttribute("id", `interest--${interestObj.id}`)
         deleteButton.addEventListener("click", () => {
         let interestId = event.target.id.split("--")[1]
+        console.log(interestId);
         interestCollect.deleteInterest(interestId)
         .then(response => {
         interestList.listInterests();

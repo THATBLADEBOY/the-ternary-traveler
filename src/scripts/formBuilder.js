@@ -24,27 +24,40 @@ const formBuilder = {
         
         costInput.placeholder = "Cost";
         formArticle.appendChild(costInput);
+
+        interestCollection.getAllPlaces()
+        .then(place => {
+
+
         
         const londonOption = document.createElement("option");
         londonOption.textContent = "London";
+        londonOption.setAttribute("value", `${place[0].name}`)
         const parisOption = document.createElement("option");
         parisOption.textContent = "Paris";
+        parisOption.setAttribute("value", `${place[1].name}`)
         const berlinOption = document.createElement("option");
         berlinOption.textContent = "Berlin";
+        berlinOption.setAttribute("value", `${place[2].name}`);
+
+
         placeSelection.appendChild(londonOption);
         placeSelection.appendChild(parisOption);
         placeSelection.appendChild(berlinOption);
         formArticle.appendChild(placeSelection);
+
+        
         const addInterestButton = document.createElement("button");
         addInterestButton.textContent = "Add";
         formArticle.appendChild(addInterestButton);
 
         addInterestButton.addEventListener("click", this.addButtonFunction);
+    })
     },
 
     addButtonFunction() {
         let interestObj = {
-            placeId: 1,
+            placeId: placeSelection.value,
             name: nameInput.value,
             description: descriptionInput.value,
             cost: costInput.value,
