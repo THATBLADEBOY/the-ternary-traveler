@@ -7,9 +7,14 @@ const interest = {
     makeInterestHTML(interestObj) {
         // const outPutArticle = document.querySelector(".output");
         const interestListOutput = document.createElement("article")
+        interestListOutput.setAttribute("id", `interest--${interestObj.id}`)
         // outPutArticle.appendChild(interestListOutput);
+        // let placeName = 
+        // interestCollection.getAllPlaces()
+        // .then(place => console.log(place[0].name, place[1].name, place[2]))
+
         const placeHeader = document.createElement("h3");
-        placeHeader.textContent = `${interestObj.placeId}`;
+        placeHeader.textContent = `${interestObj.place}`;
         interestListOutput.appendChild(placeHeader);
         const nameParagraph = document.createElement("p");
         nameParagraph.textContent = `${interestObj.name}`;
@@ -40,7 +45,7 @@ const interest = {
           console.log(interestId)
           interestCollection.getInterest(interestId)
           .then(response => {
-            interestEditForm.createAndAppendForm(interestId, response)
+            interestEditForm.createAndAppendForm(articleId, response)
           })
         })
 
@@ -58,6 +63,7 @@ const interest = {
         deleteButton.setAttribute("id", `interest--${interestObj.id}`)
         deleteButton.addEventListener("click", () => {
         let interestId = event.target.id.split("--")[1]
+        console.log(interestId);
         interestCollect.deleteInterest(interestId)
         .then(response => {
         interestList.listInterests();
