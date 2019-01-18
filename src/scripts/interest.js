@@ -5,15 +5,12 @@ import interestEditForm from "./interestEditForm";
 
 const interest = {
     makeInterestHTML(interestObj) {
-        // const outPutArticle = document.querySelector(".output");
         const interestListOutput = document.createElement("article")
         interestListOutput.setAttribute("id", `interest--${interestObj.id}`)
         interestListOutput.setAttribute("class", "container")
         interestListOutput.setAttribute("class", "interest-container")
-        // outPutArticle.appendChild(interestListOutput);
-        // let placeName = 
-        // interestCollection.getAllPlaces()
-        // .then(place => console.log(place[0].name, place[1].name, place[2]))
+
+        
 
         const placeHeader = document.createElement("h3");
         placeHeader.textContent = `${interestObj.place}`;
@@ -41,10 +38,6 @@ const interest = {
 
 
 
-
-// EDIT PORTION UNDERWAY!!!!!!!!!!!
-
-
         const editButton = document.createElement("button");
         editButton.textContent = "Edit Cost - Add Review";
         interestListOutput.appendChild(editButton);
@@ -62,44 +55,31 @@ const interest = {
 
 
 
-
-
-
-
-
-
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         interestListOutput.appendChild(deleteButton);
         deleteButton.setAttribute("id", `interest--${interestObj.id}`);
         deleteButton.setAttribute("class", "btn btn-primary")
         deleteButton.addEventListener("click", () => {
+        let deleteConfirmation = confirm(`Are you sure you want to delete ${interestObj.name} in ${interestObj.place} ?`);
+        if (deleteConfirmation == true) {
         let interestId = event.target.id.split("--")[1]
         console.log(interestId);
         interestCollect.deleteInterest(interestId)
         .then(response => {
         interestList.listInterests();
             })
+        }
         })
+    
 
 
 
 
         return interestListOutput
-
+    
     }
 }
-
-// // "interests": [
-//     { "id": 1,
-//     "placeId": 1,
-//     "name": "Local Market",
-//     "description": "Local market where you can try purchase local products and try the local food",
-//     "cost": 0.00,
-//     "review": "You can definitely get things for a lower price if you are willing to bargain!"
-//     }
-// ]
-
 
 
 export default interest

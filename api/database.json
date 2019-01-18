@@ -27,11 +27,27 @@
     },
     {
       "place": "Paris",
-      "name": "Wine Sampling in the famous vineyard",
-      "description": "tour the famous vineyard thing and drink expensive grape juice",
-      "cost": "$200.00",
+      "name": "Wine tasting",
+      "description": "Paris has a farm vineyard thing that sells you expensive grape juice that makes you feel funny.",
+      "cost": "$75.00",
       "review": "",
       "id": 3
+    },
+    {
+      "place": "Berlin",
+      "name": "video game arcade",
+      "description": "Berlin has this hidden gem video game arcade that is supposed to have an original street fighter 2 machine. bring plenty of quarters.",
+      "cost": "$10.00",
+      "review": "",
+      "id": 4
+    },
+    {
+      "place": "Berlin",
+      "name": "Futsal Soccer Pickup Game",
+      "description": "the locals in berlin hold a futsal soccer game every thursday at the park. no shinguards required, but they are recommended.",
+      "cost": "FREE",
+      "review": "",
+      "id": 5
     }
   ]
 }
