@@ -83,18 +83,12 @@ const formBuilder = {
         .then(response => {
             interestList.listInterests();
         })
+
+        nameInput.value = "";
+        descriptionInput.value = "";
+        costInput.value = "";
         
     }
 }
 
 export default formBuilder
-
-// // "interests": [
-//     { "id": 1,
-//     "placeId": 1,
-//     "name": "Local Market",
-//     "description": "Local market where you can try purchase local products and try the local food",
-//     "cost": 0.00,
-//     "review": "You can definitely get things for a lower price if you are willing to bargain!"
-//     }
-// ]
