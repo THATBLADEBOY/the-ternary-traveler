@@ -83,6 +83,10 @@ const formBuilder = {
         .then(response => {
             interestList.listInterests();
         })
+
+        nameInput.value = "";
+        descriptionInput.value = "";
+        costInput.value = "";
         
     }
 }
