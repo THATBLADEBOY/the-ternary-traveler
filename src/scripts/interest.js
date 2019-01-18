@@ -14,7 +14,7 @@ const interest = {
         // .then(place => console.log(place[0].name, place[1].name, place[2]))
 
         const placeHeader = document.createElement("h3");
-        placeHeader.textContent = `${interestObj.placeId}`;
+        placeHeader.textContent = `${interestObj.place}`;
         interestListOutput.appendChild(placeHeader);
         const nameParagraph = document.createElement("p");
         nameParagraph.textContent = `${interestObj.name}`;

@@ -46,18 +46,20 @@ const formBuilder = {
         placeSelection.appendChild(berlinOption);
         formArticle.appendChild(placeSelection);
 
+    })
+
         
         const addInterestButton = document.createElement("button");
         addInterestButton.textContent = "Add";
         formArticle.appendChild(addInterestButton);
 
         addInterestButton.addEventListener("click", this.addButtonFunction);
-    })
+    
     },
 
     addButtonFunction() {
         let interestObj = {
-            placeId: placeSelection.value,
+            place: placeSelection.value,
             name: nameInput.value,
             description: descriptionInput.value,
             cost: costInput.value,

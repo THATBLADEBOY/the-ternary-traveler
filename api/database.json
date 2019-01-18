@@ -18,11 +18,11 @@
   ],
   "interests": [
     {
-      "placeId": 1,
-      "name": "THIS IS IT!!!",
-      "description": "YES IT ISS!!!",
-      "cost": "MO MONEY",
-      "review": "ITS GREAT",
+      "place": "London",
+      "name": "Testing",
+      "description": "Testing",
+      "cost": "Testingadfad",
+      "review": "ewfwef",
       "id": 1
     }
   ]

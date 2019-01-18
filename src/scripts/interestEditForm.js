@@ -35,7 +35,7 @@ const interestEditForm = {
    
     
     let edittedInterest = {
-        placeId: interestObjToEdit.placeId,
+        place: interestObjToEdit.place,
         name: interestObjToEdit.name,
         description: interestObjToEdit.description,
         cost: costInput.value,
